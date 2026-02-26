@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* ---------------
+   ОБЩИЕ СТИЛИ
+------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Manrope", sans-serif;
+    color: #959595;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.03em;
+    background-color: #202020;
+}
+
+a {
+    color: #dedede;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1248px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.logo {
+    margin: 20px 0 19px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-weight: 800;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #9d9d9d;
+    padding: 16px 48px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.button::before {
+    content: "";
+    width: 21px;
+    height: 16px;
+    background-image: url("./IMG/mail.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.burger-menu {
+    display: none;
+}
+
+/* -----------------
+   ШАПКА
+-------------------- */
+
+.header {
+    background-color: rgba(50, 50, 50, 0.7);
+    backdrop-filter: blur(20px);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav {
+    display: flex;
+    gap: 60px;
+}
+
+.header__link {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ----------------------
+   ПРИВЕТСТВЕННАЯ СЕКЦИЯ
+------------------------- */
+
+.welcome {
+    margin: 129px 0 145px;
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome__title {
+    margin-bottom: 24px;
+    width: 500px;
+    font-weight: 700;
+    font-size: 54px;
+    line-height: 1.19;
+    letter-spacing: -0.01em;
+    color: #dedede;
+}
+
+.welcome__description {
+    margin-bottom: 88px;
+    width: 390px;
+}
+
+.welcome__img {
+    width: 400px;
+    height: 400px;
+    margin-right: 106px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ----------------------
+   РАБОТЫ
+------------------------- */
+
+.works__button {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    background-color: transparent;
+    margin-bottom: 80px;
+    padding: 0;
+    font-family: "Manrope";
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #dedede;
+    border: none;
+    opacity: 0.7;
+}
+
+.works__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 140px;
+}
+
+.works__link {
+    height: 888px;
+    position: relative;
+}
+
+.works__link:nth-child(odd) {
+    margin-top: -140px;
+}
+
+.works__link:hover {
+    opacity: 1;
+}
+
+.works__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.works__name {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -0.01em;
+    transition: opacity 0.5s;
+}
+
+.works__link:hover .works__name {
+    opacity: 1;
+}
+
+/* ----------------------
+   ПРОЕКТЫ
+------------------------- */
+
+.title {
+    font-size: 36px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #dedede;
+}
+
+.projects__title {
+    margin-top: 240px;
+    margin-bottom: 65px;
+    font-size: 36px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #dedede;
+}
+
+.projects__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.projects__img {
+    width: 400px;
+    height: 408px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.projects--vertical .projects__img {
+    height: 560px;
+}
+
+/* ----------------------
+   КОНТАКТЫ
+------------------------- */
+
+.contact {
+    margin-top: 240px;
+}
+
+.contact .container {
+    max-width: 521px;
+    text-align: center;
+}
+
+.contact__title {
+    margin-bottom: 24px;
+}
+
+.contact__text {
+    margin-bottom: 48px;
+    font-size: 26px;
+    line-height: 1.46;
+}
+
+.contact__button {
+    margin-bottom: 124px;
+}
+
+/* ----------------------
+   ПОДВАЛ
+------------------------- */
+
+.footer {
+    padding: 49px 0;
+    border-top: 1px solid #696969;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footer__copy {
+    font-size: 16px;
+}
+
+.footer__copy span {
+    color: #ECECEC;
+}
+
+.socials {
+    display: flex;
+    gap: 43px;
+}
+
+.socials__img {
+    display: flex;
+}
+
+/* ----------------------
+   МЕДИА ЗАПРОСЫ
+------------------------- */
+
+@media (max-width: 1100px) {
+
+    .welcome {
+        margin-top: 72px;
+    }
+
+    .welcome .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 64px;
+    }
+
+    .welcome__text {
+        text-align: center;
+    }
+
+    .welcome__img {
+        margin-right: 0;
+    }
+
+    .welcome__title {
+        width: auto;
+    }
+
+    .welcome__description {
+        width: auto;
+        margin-bottom: 48px;
+    }
+
+    .works__link {
+        height: 600px;
+    }
+}
+
+@media (max-width: 950px) {
+    .works__name {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 855px) {
+    .welcome {
+        margin-bottom: 128px;
+    }
+
+    .projects__title, .contact {
+        margin-top: 116px;
+    }
+
+    .projects__img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 770px) {
+    .welcome__title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        position: relative;
+    }
+
+    .burger-menu {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+
+        position: absolute;
+        top: 29px;
+        right: 15px;
+    }
+
+    .burger-menu__icon {
+        width: 30px;
+        height: 24px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .header.header--mobile .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 15px;
+    }
+
+    .header.header--mobile .header__nav {
+        display: flex;
+        align-self: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px 30px;
+    }
+
+
+
+
+
+
+    .header__nav {
+        display: none;
+    }
+
+    .footer {
+        padding: 48px 0;
+    }
+
+    .footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .socials {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 655px) {
+    .works__wrapper {
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+
+    .works__link:nth-child(odd) {
+        margin-top: 0;
+    }
+
+    .projects__img {
+        width: 366px;
+        height: 366px;
+    }
+
+    .projects--vertical .projects__img {
+        height: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    
+
+    .welcome__img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .welcome__description {
+        font-size: 18px;
+    }
+
+    .button {
+        padding: 16px 22px;
+    }
+
+    .works__button {
+        margin-bottom: 39px;
+        text-transform: none;
+    }
+
+    .works__name {
+        font-size: 28px;
+    }
+
+    .projects__title {
+        margin-bottom: 34px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .contact__title {
+        margin-bottom: 12px;
+    }
+
+    .contact .container {
+        max-width: 265px;
+    }
+
+    .contact__text {
+        font-size: 18px;
+    }
+
+    .contact__button {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 430px) {
+    .welcome__title {
+        font-size: 26px;
+    }
+}
